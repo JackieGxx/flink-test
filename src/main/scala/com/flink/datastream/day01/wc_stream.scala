@@ -15,7 +15,7 @@ object wc_stream {
     // 接收socket文本流
     val socketDS: DataStream[String] = env.socketTextStream(host, port)
     // flatMap和Map需要引用的隐式转换
-    val res: DataStream[(String, Int)] = socketDS.flatMap(_.split(" ")).filter(_.nonEmpty).map((_, 1)).keyBy(0).sum(1)
+    val res: DataStream[(String, Int)] = socketDS.flatMap(_.split(" ")).filter(_.nonEmpty).map((_, 1)).keyBy(_._1).sum(1)
     // 打印输出
     res.print().setParallelism(1)
     // 启动executor，执行任务
