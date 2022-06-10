@@ -1,8 +1,7 @@
 package com.flink.datastream.day01
 
 import org.apache.flink.api.java.utils.ParameterTool
-import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
-import org.apache.flink.api.scala._
+import org.apache.flink.streaming.api.scala._
 
 object wc_stream {
   def main(args: Array[String]): Unit = {

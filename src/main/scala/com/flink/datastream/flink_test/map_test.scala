@@ -2,10 +2,9 @@ package com.flink.datastream.flink_test
 
 import org.apache.flink.api.common.functions.{RichFlatMapFunction, RichMapFunction}
 import org.apache.flink.api.common.state.{ValueState, ValueStateDescriptor}
-import org.apache.flink.api.scala._
 import org.apache.flink.configuration.Configuration
 import org.apache.flink.streaming.api.CheckpointingMode
-import org.apache.flink.streaming.api.scala.{DataStream, StreamExecutionEnvironment}
+import org.apache.flink.streaming.api.scala._
 import org.apache.flink.util.Collector
 
 object map_test {
